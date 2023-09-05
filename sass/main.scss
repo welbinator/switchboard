@@ -191,13 +191,7 @@ main {
     display: flex;
 	margin-top: 12vh;
 }
-.column {
-    width: 20%;
-    position: relative;
-    overflow: hidden;
-    transition: opacity 0.5s ease; /* This is for the fade effect */
-    
-}
+
 .column.game, .game.inner.column {
     background-color: #B9B644;
 }
@@ -225,6 +219,11 @@ main {
 }
 .column {
 
+    width: 20%;
+    position: relative;
+    overflow: hidden;
+    transition: 0.5s ease; 
+
     a {
         text-decoration: none;
         color: inherit;
@@ -236,9 +235,6 @@ main {
     height: 88vh;
     position: relative;
     padding-top: 5rem;
-    // position: absolute;
-    // top: 0;
-    // left: 0;
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -248,7 +244,30 @@ main {
     p {
         font-size: clamp(3rem, 2vw, 9rem);
         color: white;
+        transition: .3s ease-in-out;
     }
+}
+.gradient {
+    width: 100%;
+    height: 88vh;
+    position: absolute;
+    z-index: 3;
+    transition: all .5s ease-in-out;
+    background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(0,0,0,0.25) 25%, rgba(0,0,0,0.50) 50%, rgba(0,0,0,0.75) 75%, rgba(0,0,0,1) 100%);
+    
+}
+
+&:hover {
+
+.gradient {
+    opacity: .7;
+}
+.overlay {
+
+    p {
+        transform: scale(1.3);
+    }
+}
 }
 }
 
@@ -264,18 +283,7 @@ main {
 
 .column {
 
-    .gradient {
-        width: 100%;
-        height: 88vh;
-        position: absolute;
-        z-index: 3;
-        transition: all .5s ease-in-out;
-        background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(0,0,0,0.25) 25%, rgba(0,0,0,0.50) 50%, rgba(0,0,0,0.75) 75%, rgba(0,0,0,1) 100%);
-    }
-
-    &:hover .gradient {
-        opacity: .7;
-    }
+    
 }
 
 

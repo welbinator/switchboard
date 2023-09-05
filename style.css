@@ -193,14 +193,6 @@ main {
 	margin-top: 12vh;
 }
 
-.column {
-	width: 20%;
-	position: relative;
-	overflow: hidden;
-	transition: opacity 0.5s ease;
-	/* This is for the fade effect */
-}
-
 .column.game, .game.inner.column {
 	background-color: #B9B644;
 }
@@ -233,6 +225,13 @@ main {
 	display: none;
 }
 
+.column {
+	width: 20%;
+	position: relative;
+	overflow: hidden;
+	transition: 0.5s ease;
+}
+
 .column a {
 	text-decoration: none;
 	color: inherit;
@@ -254,13 +253,7 @@ main {
 .column .overlay p {
 	font-size: clamp(3rem, 2vw, 9rem);
 	color: white;
-}
-
-@media screen and (min-width: 1025px) {
-	.page-template-inner .column {
-		width: 50%;
-		max-width: 655px;
-	}
+	transition: .3s ease-in-out;
 }
 
 .column .gradient {
@@ -274,6 +267,17 @@ main {
 
 .column:hover .gradient {
 	opacity: .7;
+}
+
+.column:hover .overlay p {
+	transform: scale(1.3);
+}
+
+@media screen and (min-width: 1025px) {
+	.page-template-inner .column {
+		width: 50%;
+		max-width: 655px;
+	}
 }
 
 .page-template-inner .column .gradient {
