@@ -7,15 +7,15 @@
         <img src="<?php echo get_template_directory_uri() . '/inc/img/' ?>orange-bg-logo.svg" alt="">
         <img src="<?php echo get_template_directory_uri() . '/inc/img/' ?>switchboard-logo-mobile.svg" alt="">
         <a href="/game" class="custom-link"><div class="overlay">
-            <p>Game</p>
+            <p>The Game</p>
         </div></a>
     </div>
-    <div class="column team">
+    <div class="column journey">
         <div class="gradient"></div>
         <img src="<?php echo get_template_directory_uri() . '/inc/img/' ?>lime-bg-logo.svg" alt="">
         <img src="<?php echo get_template_directory_uri() . '/inc/img/' ?>switchboard-logo-mobile.svg" alt="">
-        <a href="/team" class="custom-link"><div class="overlay">
-            <p>Team</p>
+        <a href="/journey" class="custom-link"><div class="overlay">
+            <p>The Journey</p>
         </div></a>
     </div>
     <div class="column press">
@@ -39,7 +39,7 @@
         <img src="<?php echo get_template_directory_uri() . '/inc/img/' ?>pink-bg-logo.svg" alt="">
         <img src="<?php echo get_template_directory_uri() . '/inc/img/' ?>switchboard-logo-mobile.svg" alt="">
         <a href="/contact-us" class="custom-link"><div class="overlay">
-            <p>Contact Us</p>
+            <p>Contact</p>
         </div></a>
     </div>
    </main>

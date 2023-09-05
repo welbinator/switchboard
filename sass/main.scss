@@ -201,7 +201,7 @@ main {
 .column.game, .game.inner.column {
     background-color: #B9B644;
 }
-.column.team, .team.inner.column {
+.column.journey, .journey.inner.column {
     background-color: #A03D18;
 }
 .column.press, .press.inner.column {
@@ -246,7 +246,7 @@ main {
     z-index: 3;
 
     p {
-        font-size: clamp(5.5rem, 3vw, 9rem);
+        font-size: clamp(3rem, 2vw, 9rem);
         color: white;
     }
 }
