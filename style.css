@@ -290,7 +290,7 @@ main {
 }
 
 .column.contact-us .gradient {
-	background: linear-gradient(180deg, rgba(35, 31, 32, 0.8) 25%, transparent 81%);
+	background: linear-gradient(180deg, rgba(35, 31, 32, 0.9) 25%, transparent 81%);
 }
 
 @media screen and (min-width: 1025px) {
