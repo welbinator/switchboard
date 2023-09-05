@@ -274,7 +274,7 @@ main {
 }
 
 .column.game .gradient {
-	background: linear-gradient(180deg, rgba(48, 52, 0, 0.85) 25%, transparent 65.8%);
+	background: linear-gradient(180deg, rgba(48, 52, 0, 0.85) 50%, transparent 90%);
 }
 
 .column.journey .gradient {
