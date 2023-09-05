@@ -228,6 +228,7 @@ main {
     a {
         text-decoration: none;
         color: inherit;
+        font-family: 'Futura Condensed ExtraBold';
     }
 
     .overlay {
@@ -245,7 +246,7 @@ main {
     z-index: 3;
 
     p {
-        font-size: clamp(5.5rem, 5vw, 9rem);
+        font-size: clamp(5.5rem, 3vw, 9rem);
         color: white;
     }
 }
