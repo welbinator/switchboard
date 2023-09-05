@@ -282,7 +282,7 @@ main {
 }
 
 .column.press .gradient {
-	background: linear-gradient(180deg, rgba(21, 0, 45, 0.6) 25%, transparent 81%);
+	background: linear-gradient(180deg, rgba(21, 0, 45, 0.8) 25%, transparent 81%);
 }
 
 .column.events .gradient {
@@ -290,7 +290,7 @@ main {
 }
 
 .column.contact-us .gradient {
-	background: linear-gradient(180deg, rgba(35, 31, 32, 0.6) 25%, transparent 81%);
+	background: linear-gradient(180deg, rgba(35, 31, 32, 0.8) 25%, transparent 81%);
 }
 
 @media screen and (min-width: 1025px) {
