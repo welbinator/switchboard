@@ -1,0 +1,332 @@
+/*!
+Theme Name: Switchboard
+Theme URI: http://underscores.me/
+Author: Apex Branding & Design
+Author URI: https://apexbranding.design
+Description: Custom Theme for Switchboard the Board Game
+Version: 1.0.0
+Tested up to: 5.4
+Requires PHP: 5.6
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: switchboard
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned.
+
+Switchboard is based on Underscores https://underscores.me/, (C) 2012-2020 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+*/
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Generic
+	- Normalize
+	- Box sizing
+# Base
+	- Typography
+	- Elements
+	- Links
+	- Forms
+## Layouts
+# Components
+	- Navigation
+	- Posts and pages
+	- Comments
+	- Widgets
+	- Media
+	- Captions
+	- Galleries
+# plugins
+	- Jetpack infinite scroll
+# Utilities
+	- Accessibility
+	- Alignments
+
+--------------------------------------------------------------*/
+@font-face {
+	font-family: 'Futura Condensed Medium';
+	src: url("inc/fonts/Futura Condensed Medium.otf") format("opentype");
+}
+
+@font-face {
+	font-family: 'Futura Condensed Regular';
+	src: url("inc/fonts/Futura Condensed Regular.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: 'Futura Condensed ExtraBold';
+	src: url("inc/fonts/Futura Condensed ExtraBold.ttf") format("truetype");
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	font-size: 62.5%;
+	--font-size-small: 1.6rem;
+	--font-size-default: 1.8rem;
+	--font-size-large: 2.6rem;
+}
+
+.font-sm {
+	font-size: var(--font-size-small);
+}
+
+.font-lg {
+	font-size: var(--font-size-large);
+}
+
+body {
+	font-family: 'Futura Condensed Medium', sans-serif;
+	font-size: var(--font-size-default);
+	color: #58595B;
+}
+
+header {
+	display: flex;
+	align-items: center;
+	padding: 20px;
+	gap: 50px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 9;
+	background-color: white;
+	height: 12vh;
+	min-height: 85px;
+}
+
+.main-navigation {
+	width: 100%;
+}
+
+.main-navigation ul {
+	display: none;
+	list-style: none;
+	margin: 0;
+	padding-left: 0;
+}
+
+.main-navigation ul ul {
+	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+	float: left;
+	position: absolute;
+	top: 100%;
+	left: -999em;
+	z-index: 99999;
+}
+
+.main-navigation ul ul ul {
+	left: -999em;
+	top: 0;
+}
+
+.main-navigation ul ul li:hover > ul,
+.main-navigation ul ul li.focus > ul {
+	display: block;
+	left: auto;
+}
+
+.main-navigation ul ul a {
+	width: 200px;
+}
+
+.main-navigation ul li:hover > ul,
+.main-navigation ul li.focus > ul {
+	left: auto;
+}
+
+.main-navigation li {
+	position: relative;
+}
+
+.main-navigation a {
+	display: block;
+	text-decoration: none;
+	color: #58595B;
+}
+
+.main-navigation a:hover {
+	font-weight: bold;
+}
+
+/* Small menu. */
+.menu-toggle,
+.main-navigation.toggled ul {
+	display: block;
+}
+
+@media screen and (min-width: 37.5em) {
+	.menu-toggle {
+		display: none;
+	}
+	.main-navigation ul {
+		display: flex;
+	}
+}
+
+nav ul {
+	display: flex;
+	list-style: none;
+	align-items: center;
+	justify-content: flex-end;
+	gap: 15px;
+}
+
+main {
+	width: 100%;
+	height: 88vh;
+	display: flex;
+	margin-top: 12vh;
+}
+
+.column {
+	width: 20%;
+	position: relative;
+	overflow: hidden;
+}
+
+.column:nth-child(1) {
+	background-color: #F7941D;
+}
+
+.column:nth-child(2) {
+	background-color: #C8DA2B;
+}
+
+.column:nth-child(3) {
+	background-color: #664A9E;
+}
+
+.column:nth-child(4) {
+	background-color: #90D2C3;
+}
+
+.column:nth-child(5) {
+	background-color: #F05885;
+}
+
+.column img {
+	object-fit: cover;
+	width: 100%;
+	height: 88vh;
+	z-index: 2;
+	position: absolute;
+}
+
+.column img:nth-of-type(2) {
+	display: none;
+}
+
+.column .overlay {
+	width: 100%;
+	height: 88vh;
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	opacity: 0;
+	pointer-events: none;
+	transition: all .5s ease-in-out;
+	z-index: 3;
+}
+
+.column .overlay a {
+	font-size: clamp(5.5rem, 5vw, 9rem);
+}
+
+@media screen and (min-width: 1025px) {
+	.column .overlay p {
+		transform: translateY(-50px);
+		transition: .3s ease-out;
+		transition-delay: .2s;
+		opacity: 0;
+	}
+	.column:hover .overlay p {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+.column .gradient {
+	position: absolute;
+	z-index: 1;
+	transform: translateY(-100%);
+	transition: all .5s ease-in-out;
+}
+
+.column:nth-child(1) .gradient {
+	width: 100%;
+	height: 88vh;
+	background: linear-gradient(0deg, #f7941d 0%, #664a9e 100%);
+}
+
+.column:nth-child(2) .gradient {
+	width: 100%;
+	height: 88vh;
+	background: linear-gradient(0deg, #c8da2b 25%, #44c5e2 100%, #44c5e2 100%);
+}
+
+.column:nth-child(3) .gradient {
+	width: 100%;
+	height: 88vh;
+	background: linear-gradient(0deg, #664a9e 0%, #f36c3b 75%, #f36c3b 100%);
+}
+
+.column:nth-child(4) .gradient {
+	width: 100%;
+	height: 88vh;
+	background: linear-gradient(0deg, #90d2c3 0%, #90d2c3 25%, #664a9e 100%);
+}
+
+.column:nth-child(5) .gradient {
+	width: 100%;
+	height: 88vh;
+	background: linear-gradient(0deg, #f05885 0%, #fdb850 50%, #ffc549 100%);
+}
+
+.column:hover .gradient {
+	transform: translateY(0);
+}
+
+.column:hover .overlay {
+	opacity: 1;
+	pointer-events: all;
+}
+
+@media screen and (max-width: 1024px) {
+	main {
+		flex-direction: column;
+	}
+	.column {
+		width: 100%;
+		height: calc(88vh / 5);
+	}
+	.column img:nth-of-type(1) {
+		display: none;
+	}
+	.column img:nth-of-type(2) {
+		display: block;
+		object-fit: cover;
+		width: 100%;
+		height: 100%;
+	}
+	.column .overlay {
+		opacity: 1;
+		pointer-events: all;
+		height: 100%;
+	}
+}
+
+/*# sourceMappingURL=main.css.map */

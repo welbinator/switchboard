@@ -1,0 +1,320 @@
+/*!
+Theme Name: Switchboard
+Theme URI: http://underscores.me/
+Author: Apex Branding & Design
+Author URI: https://apexbranding.design
+Description: Custom Theme for Switchboard the Board Game
+Version: 1.0.0
+Tested up to: 5.4
+Requires PHP: 5.6
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: switchboard
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned.
+
+Switchboard is based on Underscores https://underscores.me/, (C) 2012-2020 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Generic
+	- Normalize
+	- Box sizing
+# Base
+	- Typography
+	- Elements
+	- Links
+	- Forms
+## Layouts
+# Components
+	- Navigation
+	- Posts and pages
+	- Comments
+	- Widgets
+	- Media
+	- Captions
+	- Galleries
+# plugins
+	- Jetpack infinite scroll
+# Utilities
+	- Accessibility
+	- Alignments
+
+--------------------------------------------------------------*/
+@font-face {
+    font-family: 'Futura Condensed Medium';
+    src: url('inc/fonts/Futura Condensed Medium.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Futura Condensed Regular';
+    src: url('inc/fonts/Futura Condensed Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Futura Condensed ExtraBold';
+    src: url('inc/fonts/Futura Condensed ExtraBold.ttf') format('truetype');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    font-size: 62.5%;
+    --font-size-small: 1.6rem;
+    --font-size-default: 1.8rem;
+    --font-size-large: 2.6rem;
+}
+.font-sm {
+    font-size: var(--font-size-small);
+}
+.font-lg {
+    font-size: var(--font-size-large);
+}
+
+body {
+    font-family: 'Futura Condensed Medium', sans-serif;
+    font-size: var(--font-size-default);
+    color: #58595B;
+}
+
+.hide {
+    display: none;
+}
+
+header.site-header {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    gap: 50px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9;
+    background-color: white;
+    height: 12vh;
+    min-height: 85px;
+}
+.main-navigation {
+	width: 100%;
+}
+
+.main-navigation ul {
+	display: none;
+	list-style: none;
+	margin: 0;
+	padding-left: 0;
+}
+
+.main-navigation ul ul {
+	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+	float: left;
+	position: absolute;
+	top: 100%;
+	left: -999em;
+	z-index: 99999;
+}
+
+.main-navigation ul ul ul {
+	left: -999em;
+	top: 0;
+}
+
+.main-navigation ul ul li:hover > ul,
+.main-navigation ul ul li.focus > ul {
+	display: block;
+	left: auto;
+}
+
+.main-navigation ul ul a {
+	width: 200px;
+}
+
+.main-navigation ul li:hover > ul,
+.main-navigation ul li.focus > ul {
+	left: auto;
+}
+
+.main-navigation li {
+	position: relative;
+}
+
+.main-navigation a {
+	display: block;
+	text-decoration: none;
+    color: #58595B;
+}
+.main-navigation a:hover {
+    font-weight: bold;
+}
+
+/* Small menu. */
+.menu-toggle,
+.main-navigation.toggled ul {
+	display: block;
+}
+
+@media screen and (min-width: 37.5em) {
+
+	.menu-toggle {
+		display: none;
+	}
+
+	.main-navigation ul {
+		display: flex;
+	}
+}
+
+
+
+nav ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 15px;
+}
+main {
+    width: 100%;
+    height: 88vh;
+    display: flex;
+	margin-top: 12vh;
+}
+.column {
+    width: 20%;
+    position: relative;
+    overflow: hidden;
+    transition: opacity 0.5s ease; /* This is for the fade effect */
+    
+}
+.column.game, .game.inner.column {
+    background-color: #F7941D;
+}
+.column.team, .team.inner.column {
+    background-color: #C8DA2B;
+}
+.column.press, .press.inner.column {
+    background-color: #664A9E;
+}
+.column.events, .events.inner.column {
+    background-color: #90D2C3;
+}
+.column.contact-us, .contact.us.inner.column {
+    background-color: #F05885;
+}
+.column img {
+    object-fit: cover;
+    width: 100%;
+    height: 88vh;
+    z-index: 2;
+    position: absolute;
+}
+.column img:nth-of-type(2) {
+    display: none;
+}
+.column {
+
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    .overlay {
+    width: 100%;
+    height: 88vh;
+    position: relative;
+    padding-top: 5rem;
+    // position: absolute;
+    // top: 0;
+    // left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    transition: all .5s ease-in-out;
+    z-index: 3;
+
+    p {
+        font-size: clamp(5.5rem, 5vw, 9rem);
+        color: white;
+    }
+}
+}
+
+
+@media screen and (min-width: 1025px) {
+    .page-template-inner .column {
+        width: 50%;
+        max-width: 655px;
+    }
+    
+}
+
+
+.column {
+
+    .gradient {
+        width: 100%;
+        height: 88vh;
+        position: absolute;
+        z-index: 3;
+        transition: all .5s ease-in-out;
+        background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(0,0,0,0.25) 25%, rgba(0,0,0,0.50) 50%, rgba(0,0,0,0.75) 75%, rgba(0,0,0,1) 100%);
+    }
+
+    &:hover .gradient {
+        opacity: .7;
+    }
+}
+
+
+
+.page-template-inner {
+
+    .column {
+        
+        .gradient {
+            background: transparent;
+        }
+        
+    }
+}
+.inner-content {
+    flex: auto;
+    padding-inline: 36rem;
+
+    h1 {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    main {
+        flex-direction: column; 
+    }
+    .column {
+        width: 100%;
+		height: calc(88vh / 5);
+    }
+    .column img:nth-of-type(1) {
+        display: none;
+    }
+    .column img:nth-of-type(2) {
+        display: block;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+    
+    
+}
