@@ -273,6 +273,26 @@ main {
 	transform: scale(1.1);
 }
 
+.column.game .gradient {
+	background: linear-gradient(180deg, rgba(48, 52, 0, 0.85) 25%, transparent 65.8%);
+}
+
+.column.journey .gradient {
+	background: linear-gradient(180deg, rgba(27, 0, 0, 0.85) 25%, transparent 81%);
+}
+
+.column.press .gradient {
+	background: linear-gradient(180deg, rgba(21, 0, 45, 0.6) 25%, transparent 81%);
+}
+
+.column.events .gradient {
+	background: linear-gradient(180deg, rgba(0, 3, 17, 0.6) 42.86%, transparent 81%);
+}
+
+.column.contact-us .gradient {
+	background: linear-gradient(180deg, rgba(35, 31, 32, 0.6) 25%, transparent 81%);
+}
+
 @media screen and (min-width: 1025px) {
 	.page-template-inner .column {
 		width: 50%;
