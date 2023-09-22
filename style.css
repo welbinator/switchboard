@@ -295,7 +295,7 @@ main {
 
 @media screen and (min-width: 1025px) {
 	.page-template-inner .column {
-		width: 50%;
+		width: 20%;
 		max-width: 655px;
 	}
 }
