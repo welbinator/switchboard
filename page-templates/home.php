@@ -1,8 +1,7 @@
 <?php /* Template Name: Home Page */ ?>
 <?php echo get_header(); ?>
 <main id="content-area">
-    
-    <div class="column game">
+        <div class="column game">
         <div class="gradient"></div>
         <img src="<?php echo get_template_directory_uri() . '/inc/img/' ?>yellow-bg-logo.svg" alt="">
         <img src="<?php echo get_template_directory_uri() . '/inc/img/' ?>switchboard-logo-mobile.svg" alt="">
@@ -42,5 +41,6 @@
             <p>Contact</p>
         </div></a>
     </div>
+    
    </main>
    <?php echo get_footer(); ?>

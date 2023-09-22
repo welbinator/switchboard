@@ -88,6 +88,7 @@ body {
 	font-family: 'Futura Condensed Medium', sans-serif;
 	font-size: var(--font-size-default);
 	color: #58595B;
+	position: relative;
 }
 
 .hide {
@@ -191,6 +192,11 @@ main {
 	height: 88vh;
 	display: flex;
 	margin-top: 12vh;
+	position: relative;
+}
+
+.column {
+	position: relative;
 }
 
 .column.game, .game.inner.column {
@@ -298,6 +304,13 @@ main {
 		width: 20%;
 		max-width: 655px;
 	}
+}
+
+.column-move-left {
+	left: 0 !important;
+	/* Ensure this overrides any other left property */
+	transition: left 1s ease;
+	/* 1s duration for the animation */
 }
 
 .page-template-inner .column .gradient {
