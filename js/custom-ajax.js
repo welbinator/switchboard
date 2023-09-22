@@ -18,6 +18,9 @@ jQuery(document).ready(function ($) {
         // Cache the clicked column
         const clickedColumn = $( this ).closest( '.column' );
 
+        // Determine the index of the clicked column among all columns
+        const columnIndex = $( '.column' ).index(clickedColumn);
+
         // For each .custom-link
         $( '.custom-link' ).each( function() {
             // If the parent .column of the current .custom-link is not the clicked column
@@ -29,9 +32,31 @@ jQuery(document).ready(function ($) {
             }
         });
 
-        // Move #content-area to the left by 100% using translateX with a transition and a delay
+        // Determine the translateX value based on the clicked column's index
+        let translateValue = '';
+        switch (columnIndex) {
+            case 0: // First column
+                translateValue = '0%'; // No transform
+                break;
+            case 1: // Second column
+                translateValue = '-20%';
+                break;
+            case 2: // Third column
+                translateValue = '-40%';
+                break;
+            case 3: // Fourth column
+                translateValue = '-60%';
+                break;
+            case 4: // Fifth column
+                translateValue = '-80%';
+                break;
+            default:
+                break;
+        }
+
+        // Apply the determined translateX value with a transition and a delay
         $( '#content-area' ).css({
-            'transform': 'translateX(-100%)',
+            'transform': `translateX(${translateValue})`,
             'transition': 'transform 500ms',
             'transition-delay': '500ms' // 1 second delay before the transform animation starts
         });
