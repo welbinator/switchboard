@@ -190,7 +190,6 @@ nav ul {
 main {
 	width: 100%;
 	height: 88vh;
-	display: flex;
 	margin-top: 12vh;
 	position: relative;
 }
@@ -300,6 +299,9 @@ main {
 }
 
 @media screen and (min-width: 1025px) {
+	main {
+		display: flex;
+	}
 	.page-template-inner .column {
 		width: 20%;
 		max-width: 655px;
@@ -323,9 +325,6 @@ main {
 }
 
 @media screen and (max-width: 1024px) {
-	main {
-		flex-direction: column;
-	}
 	.column {
 		width: 100%;
 		height: calc(88vh / 5);
