@@ -238,7 +238,7 @@ main {
 	transition: 0.5s ease;
 }
 
-.column a {
+.column a, .column h1 {
 	text-decoration: none;
 	color: inherit;
 	font-family: 'Futura Condensed ExtraBold';
@@ -256,7 +256,7 @@ main {
 	z-index: 3;
 }
 
-.column .overlay p {
+.column .overlay p, .column .overlay h1 {
 	font-size: clamp(3rem, 2vw, 9rem);
 	color: white;
 	transition: .3s ease-in-out;
@@ -313,13 +313,9 @@ main {
 	/* 1s duration for the animation */
 }
 
-.page-template-inner .column .gradient {
-	background: transparent;
-}
-
 .inner-content {
-	flex: auto;
-	padding-inline: 36rem;
+	width: 80%;
+	padding: 5rem;
 }
 
 .inner-content h1 {

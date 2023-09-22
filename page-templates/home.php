@@ -2,13 +2,15 @@
 <?php echo get_header(); ?>
 <main id="content-area">
         <div class="column game">
-        <div class="gradient"></div>
-        <img src="<?php echo get_template_directory_uri() . '/inc/img/' ?>yellow-bg-logo.svg" alt="">
-        <img src="<?php echo get_template_directory_uri() . '/inc/img/' ?>switchboard-logo-mobile.svg" alt="">
-        <a href="/game" class="custom-link"><div class="overlay">
-            <p>The Game</p>
-        </div></a>
-    </div>
+            <div class="gradient"></div>
+            <img src="<?php echo get_template_directory_uri() . '/inc/img/' ?>yellow-bg-logo.svg" alt="">
+            <img src="<?php echo get_template_directory_uri() . '/inc/img/' ?>switchboard-logo-mobile.svg" alt="">
+            <a href="/the-game" class="custom-link">
+                <div class="overlay">
+                    <p>The Game</p>
+                </div>
+            </a>
+        </div>
     <div class="column journey">
         <div class="gradient"></div>
         <img src="<?php echo get_template_directory_uri() . '/inc/img/' ?>orange-bg-logo.svg" alt="">

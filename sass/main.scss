@@ -229,7 +229,7 @@ main {
         overflow: hidden;
         transition: 0.5s ease; 
 
-        a {
+        a, h1 {
         text-decoration: none;
         color: inherit;
         font-family: 'Futura Condensed ExtraBold';
@@ -246,7 +246,7 @@ main {
         transition: all .5s ease-in-out;
         z-index: 3;
 
-            p {
+            p, h1 {
             font-size: clamp(3rem, 2vw, 9rem);
             color: white;
             transition: .3s ease-in-out;
@@ -309,15 +309,13 @@ main {
 
     .column {
         
-        .gradient {
-            background: transparent;
-        }
+        
         
     }
 }
 .inner-content {
-    flex: auto;
-    padding-inline: 36rem;
+    width: 80%;
+    padding: 5rem;
 
     h1 {
         text-align: center;
