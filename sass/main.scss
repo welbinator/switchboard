@@ -102,7 +102,7 @@ header.site-header {
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 9;
+    z-index: 999;
     background-color: #3C3E44;
     height: 12vh;
     min-height: 85px;
@@ -194,6 +194,7 @@ main {
 }
 .column {
     position: relative;
+    z-index: 99;
 }
 
 .column.game, .game.inner.column {
@@ -208,7 +209,7 @@ main {
 .column.events, .events.inner.column {
     background-color: #324754;
 }
-.column.contact-us, .contact.us.inner.column {
+.column.contact, .contact.inner.column {
     background-color: #545456;
 }
 .column img {
@@ -284,7 +285,7 @@ main {
 .column.events .gradient {
     background: linear-gradient(180deg, rgba(0, 3, 17, 0.60) 42.86%, transparent 81%);
 }
-.column.contact-us .gradient {
+.column.contact .gradient {
     background: linear-gradient(180deg, rgba(35, 31, 32, 0.90) 25%, transparent 81%);
 }
 
@@ -328,6 +329,10 @@ main {
 
 
 @media screen and (max-width: 1024px) {
+    .inner-content {
+        margin-left: 0;
+        margin-top: calc((88vh / 5) + 12vh);
+    }
     .column {
         width: 100%;
 		height: calc(88vh / 5);
@@ -341,6 +346,7 @@ main {
     .page-template-inner .column {
         width: 100%;
 		height: calc(88vh / 5);
+        top: 12vh;
 
         img {
             display: none;

@@ -5,7 +5,7 @@
             <div class="gradient"></div>
             <img class="desktop-column-image" src="<?php echo get_template_directory_uri() . '/inc/img/' ?>yellow-bg-logo.svg" alt="">
             <img class="mobile-column-image" src="<?php echo get_template_directory_uri() . '/inc/img/' ?>switchboard-logo-mobile.svg" alt="">
-            <a href="/the-game" class="custom-link">
+            <a href="/game" class="custom-link">
                 <div class="overlay">
                     <p>The Game</p>
                 </div>
@@ -35,11 +35,11 @@
             <p>Events</p>
         </div></a>
     </div>
-    <div class="column contact-us">
+    <div class="column contact">
         <div class="gradient"></div>
         <img class="desktop-column-image" src="<?php echo get_template_directory_uri() . '/inc/img/' ?>grey-bg-logo.svg" alt="">
         <img class="mobile-column-image" src="<?php echo get_template_directory_uri() . '/inc/img/' ?>switchboard-logo-mobile.svg" alt="">
-        <a href="/contact-us" class="custom-link"><div class="overlay">
+        <a href="/contact" class="custom-link"><div class="overlay">
             <p>Contact</p>
         </div></a>
     </div>

@@ -2,7 +2,8 @@
 <?php echo get_header(); ?>
 <main>
 
-    <div class="<?php print strtolower(get_the_title()); ?> inner column">
+<div class="<?php echo strtolower(get_post_field('post_name', get_the_ID())); ?> inner column">
+
         <div class="gradient"></div>
         <!-- <img src="<?php echo get_template_directory_uri() . '/inc/img/' ?>yellow-bg-logo.svg" alt=""> -->
         <img class="desktop-column-image" src="<?php echo esc_url( get_field('column_image') ); ?>" alt="">
