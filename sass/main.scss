@@ -335,7 +335,8 @@ main {
     }
     .column {
         width: 100%;
-		height: calc(88vh / 5);
+		// height: calc(88vh / 5);
+        height: 20%;
     }
     .column img.mobile-column-image {
         display: block;
