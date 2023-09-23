@@ -227,7 +227,7 @@ main {
 }
 
 .column {
-	width: 20%;
+	width: 20vw;
 	position: relative;
 	overflow: hidden;
 	transition: 0.5s ease;
@@ -317,12 +317,12 @@ main {
 .page-template-inner .column {
 	position: fixed;
 	left: 0;
-	height: 100%;
 }
 
 .inner-content {
-	width: 80%;
+	width: 80vw;
 	padding: 5rem;
+	margin-left: 20vw;
 }
 
 .inner-content h1 {
