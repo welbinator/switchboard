@@ -107,7 +107,7 @@ header.site-header {
 	z-index: 999;
 	background-color: #3C3E44;
 	height: 12vh;
-	min-height: 85px;
+	min-height: 68px;
 }
 
 .main-navigation {
@@ -331,13 +331,16 @@ main {
 }
 
 @media screen and (max-width: 1024px) {
+	header.site-header {
+		padding: 0;
+	}
 	.inner-content {
 		margin-left: 0;
 		margin-top: calc((88vh / 5) + 12vh);
 	}
 	.column {
 		width: 100%;
-		height: 20%;
+		height: calc(88vh / 5);
 	}
 	.column img.mobile-column-image {
 		display: block;
