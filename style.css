@@ -165,12 +165,67 @@ header.site-header {
 }
 
 /* Small menu. */
+button.menu-toggle {
+	margin-left: auto;
+	background: transparent;
+	border: 0;
+}
+
+.menu-toggle i.fas.fa-bars {
+	font-size: 32px;
+	/* Adjust size as needed */
+	color: #fff;
+	/* Adjust color as needed */
+}
+
+.screen-reader-text {
+	border: 0;
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+	word-wrap: normal !important;
+}
+
+.menu-menu-1-container {
+	transition: transform .3s;
+}
+
+.toggled .menu-menu-1-container {
+	height: 100vh;
+	background: #3C3E44;
+	top: 12vh;
+	position: absolute;
+	right: 0;
+	width: 50vw;
+	transform: translateX(0);
+}
+
 .menu-toggle,
 .main-navigation.toggled ul {
 	display: block;
 }
 
-@media screen and (min-width: 37.5em) {
+.toggled .nav-menu li a {
+	font-size: 3rem;
+}
+
+.toggled .nav-menu li {
+	margin-bottom: 10px;
+}
+
+.toggled .nav-menu {
+	padding: 20px 20px 20px 50px;
+}
+
+@media screen and (min-width: 1025px) {
+	.toggled .menu-menu-1-container {
+		display: none;
+	}
 	.menu-toggle {
 		display: none;
 	}
@@ -330,7 +385,30 @@ main {
 	text-align: center;
 }
 
+.cool-vertical-timeline-body {
+	margin: 0;
+}
+
+.plethoraplugins-tabs ul li a span {
+	font-weight: 100;
+}
+
+.plethoraplugins-tabs ul li a.active span {
+	font-weight: 700;
+}
+
+.plethoraplugins-tabs-container--horizontal.plethoraplugins-theme__minimal.plethoraplugins-theme__basic .plethoraplugins-tabs a:after {
+	height: 3px;
+}
+
+.plethoraplugins-tabs-container--horizontal.plethoraplugins-theme__minimal.plethoraplugins-theme__basic .plethoraplugins-tabs {
+	border-bottom: 0;
+}
+
 @media screen and (max-width: 1024px) {
+	.menu-menu-1-container {
+		transform: translateX(100%);
+	}
 	.inner-content {
 		margin-left: 0;
 		margin-top: calc((88vh / 5) + 12vh);

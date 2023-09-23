@@ -155,6 +155,10 @@ function switchboard_scripts() {
 
     wp_enqueue_script('custom-ajax');
 
+	// fontawesome
+	wp_enqueue_style( 'font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css' );
+
+
 }
 add_action( 'wp_enqueue_scripts', 'switchboard_scripts' );
 
